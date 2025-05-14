@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { Button } from "../components/button";
 
 export default function Home() {
 
@@ -17,9 +18,7 @@ export default function Home() {
 
       <TextInput style={styles.input} placeholder="New Skill" placeholderTextColor="#555" onChangeText={setNewSkill}/>
 
-      <TouchableOpacity style={styles.button} onPress={handleAddNewSkill}>
-        <Text style={styles.buttonText}>Add</Text>
-      </TouchableOpacity>
+      <Button/>  
 
       <Text style={[styles.title, { marginVertical: 50}]}>
         My Skills
@@ -58,18 +57,6 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 30,
         borderRadius: 7,
-    },
-    button: {
-        backgroundColor: '#A340F7',
-        padding: 15,
-        borderRadius: 7,
-        alignItems: 'center',
-        marginTop: 20,
-    },
-    buttonText: {
-        backgroundColor: '#fff',
-        fontSize: 17,
-        fontWeight: 'bold'
     },
     buttonSkill: {
         backgroundColor: '#1F1E25',
