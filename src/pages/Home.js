@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 import { Button } from "../components/button";
+import { SkillCard } from "../components/skillCard";
 
 export default function Home() {
 
@@ -25,11 +26,7 @@ export default function Home() {
       </Text>
      { 
       mySkills.map(skill =>(
-         <TouchableOpacity key={skill} styles={styles.buttonSkill}>
-        <Text style={styles.textSkill}>
-          {skill}
-        </Text>
-      </TouchableOpacity>
+         <SkillCard/>
       ))
      }
 
@@ -58,16 +55,4 @@ const styles = StyleSheet.create({
         marginTop: 30,
         borderRadius: 7,
     },
-    buttonSkill: {
-        backgroundColor: '#1F1E25',
-        padding: 15,
-        borderRadius: 50,
-        alignItems: 'center',
-        marginVertical: 10
-    },
-    textSkill: {
-        color: '#fff',
-        fontSize: 22,
-        fontWeight: 'bold',
-    }
 })
